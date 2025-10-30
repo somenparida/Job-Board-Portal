@@ -1,0 +1,36 @@
+# Render deployment manifest for this monorepo.
+#
+# Notes:
+# - This file defines two services: a Node web service for the backend and a
+#   static site for the frontend build. After you push this repository to GitHub
+#   and connect it to Render, Render will read this file and create the services.
+# - You still need to create the following secrets in Render for the backend:
+#     - MONGO_URI (your MongoDB connection string)
+#     - JWT_SECRET (a secret for signing JWTs)
+# - For the frontend set REACT_APP_API_URL to your backend URL (e.g. https://job-backend.onrender.com/api)
+
+services:
+  - type: web
+    name: job-portal-backend
+    env: node
+    plan: free
+    branch: main
+    buildCommand: cd backend && npm ci
+    startCommand: cd backend && npm run start
+    envVars:
+      - key: MONGO_URI
+        fromSecret: MONGO_URI
+      - key: JWT_SECRET
+        fromSecret: JWT_SECRET
+
+  - type: static
+    name: job-portal-frontend
+    env: static
+    plan: free
+    branch: main
+    buildCommand: cd frontend && npm ci && npm run build
+    publishPath: frontend/build
+    envVars:
+      - key: REACT_APP_API_URL
+        # Set this secret/value in Render to point to your backend's public URL (including /api)
+        value: ""
