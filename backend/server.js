@@ -18,4 +18,7 @@ app.use('/api', require('./routes/misc'));
 app.use('/api/applications', require('./routes/applications'));
 
 const PORT = process.env.PORT || 5000;
+app.get('/', (req, res) => {
+  res.send('✅ Job Board API is running...');
+});
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
