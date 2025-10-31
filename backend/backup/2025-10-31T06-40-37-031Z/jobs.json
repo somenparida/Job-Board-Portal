@@ -1,0 +1,101 @@
+[
+  {
+    "_id": "690377ddfd27d8aa9bbb0d7d",
+    "title": "Frontend Engineer",
+    "company": "Acme Corp",
+    "location": "Remote",
+    "type": "Full-time",
+    "salary": "$110k - $140k",
+    "description": "Build delightful user interfaces with React and modern tooling. Collaborate with designers and backend engineers.",
+    "createdAt": "2025-10-30T14:36:13.572Z",
+    "__v": 0
+  },
+  {
+    "_id": "690377ddfd27d8aa9bbb0d7e",
+    "title": "Backend Developer (Node.js)",
+    "company": "Globex",
+    "location": "New York, NY",
+    "type": "Full-time",
+    "salary": "$120k - $150k",
+    "description": "Design scalable APIs with Express and MongoDB. Experience with authentication and testing preferred.",
+    "createdAt": "2025-10-30T14:36:13.572Z",
+    "__v": 0
+  },
+  {
+    "_id": "690377ddfd27d8aa9bbb0d7f",
+    "title": "Full-Stack Developer",
+    "company": "Initech",
+    "location": "Austin, TX",
+    "type": "Full-time",
+    "salary": "$115k - $145k",
+    "description": "Own features end-to-end across React and Node services. CI/CD and cloud familiarity a plus.",
+    "createdAt": "2025-10-30T14:36:13.572Z",
+    "__v": 0
+  },
+  {
+    "_id": "690377ddfd27d8aa9bbb0d80",
+    "title": "Data Engineer",
+    "company": "Stark Industries",
+    "location": "San Francisco, CA",
+    "type": "Full-time",
+    "salary": "$130k - $170k",
+    "description": "Build reliable data pipelines and warehouses. Work with streaming, ETL, and analytics teams.",
+    "createdAt": "2025-10-30T14:36:13.572Z",
+    "__v": 0
+  },
+  {
+    "_id": "690377ddfd27d8aa9bbb0d81",
+    "title": "Product Designer",
+    "company": "Wayne Enterprises",
+    "location": "Gotham City",
+    "type": "Contract",
+    "salary": "$80/hr - $110/hr",
+    "description": "Craft intuitive user experiences and visuals. Partner closely with product and engineering.",
+    "createdAt": "2025-10-30T14:36:13.572Z",
+    "__v": 0
+  },
+  {
+    "_id": "690377ddfd27d8aa9bbb0d82",
+    "title": "DevOps Engineer",
+    "company": "Umbrella Corp",
+    "location": "Remote",
+    "type": "Full-time",
+    "salary": "$125k - $160k",
+    "description": "Automate infrastructure and deployments. Kubernetes, Docker, and monitoring experience required.",
+    "createdAt": "2025-10-30T14:36:13.572Z",
+    "__v": 0
+  },
+  {
+    "_id": "690377ddfd27d8aa9bbb0d83",
+    "title": "QA Automation Engineer",
+    "company": "Hooli",
+    "location": "Palo Alto, CA",
+    "type": "Full-time",
+    "salary": "$100k - $130k",
+    "description": "Create robust automated test suites and frameworks. Work with Cypress/Jest and CI systems.",
+    "createdAt": "2025-10-30T14:36:13.572Z",
+    "__v": 0
+  },
+  {
+    "_id": "690377ddfd27d8aa9bbb0d84",
+    "title": "Intern, Software Engineering",
+    "company": "Wonka Labs",
+    "location": "Boston, MA",
+    "type": "Internship",
+    "salary": "$30/hr - $38/hr",
+    "description": "Hands-on experience across the stack. Mentorship and meaningful projects in a fast-paced team.",
+    "createdAt": "2025-10-30T14:36:13.572Z",
+    "__v": 0
+  },
+  {
+    "_id": "69038e0cb08fdfec44197774",
+    "title": "Mobile App Developer",
+    "company": "Blue Ocean Apps",
+    "location": "Seattle, WA",
+    "type": "Full-time",
+    "salary": "$115k - $150k",
+    "description": "Build and maintain high-quality React Native apps, collaborate with API teams, and ship features to iOS and Android.",
+    "createdAt": "2025-10-30T16:10:52.270Z",
+    "__v": 0
+  }
+]
