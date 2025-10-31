@@ -7,7 +7,18 @@ const connectDB = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log('MongoDB connected');
+    const { host, name } = mongoose.connection;
+    // Mask credentials if present
+    const masked = (() => {
+      try {
+        const u = new URL(uri);
+        if (u.password) u.password = '***';
+        if (u.username) u.username = '***';
+        return u.toString();
+      } catch { return uri.startsWith('mongodb') ? 'mongodb://***' : uri; }
+    })();
+    console.log(`MongoDB connected → db: ${name} @ ${host}`);
+    console.log(`Using URI: ${masked}`);
   } catch (err) {
     console.error('MongoDB connection error:', err.message);
     process.exit(1);

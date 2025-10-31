@@ -10,6 +10,7 @@ import JobsList from './components/JobsList';
 import JobForm from './components/JobForm';
 import JobDetails from './components/JobDetails';
 import UsersList from './components/UsersList';
+import AdminJobs from './components/AdminJobs';
 import AdminApplications from './components/AdminApplications';
 import AdminContactMessages from './components/AdminContactMessages';
 import ChangePassword from './components/ChangePassword';
@@ -53,6 +54,10 @@ function App() {
             <Route
               path="/admin"
               element={<ProtectedRoute user={user} role="admin"><AdminDashboard /></ProtectedRoute>}
+            />
+            <Route
+              path="/admin/jobs"
+              element={<ProtectedRoute user={user} role="admin"><AdminJobs /></ProtectedRoute>}
             />
             <Route
               path="/admin/jobs/new"

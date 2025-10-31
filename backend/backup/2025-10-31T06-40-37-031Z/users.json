@@ -1,0 +1,47 @@
+[
+  {
+    "_id": "69035e64576dd42f76e5e01d",
+    "name": "Admin",
+    "email": "admin@example.com",
+    "password": "$2a$10$1DJ/GUHDde0QTye4SyJk8ubIQYgBDSsdTPrPmEBwqGHsjH4.C3Pge",
+    "role": "admin",
+    "createdAt": "2025-10-30T12:47:32.992Z",
+    "__v": 0
+  },
+  {
+    "_id": "69038f9fcbaa53ca2eec5e90",
+    "name": "Jane Developer",
+    "email": "jane.dev@example.com",
+    "password": "$2a$10$5c0V.D4b4EXnTjwdTZ1D2uQDsPke9OHbW1WTU.t6OzDmNnyqn49kK",
+    "role": "user",
+    "createdAt": "2025-10-30T16:17:35.263Z",
+    "__v": 0
+  },
+  {
+    "_id": "690391b0f832915db5b0a279",
+    "name": "Admin",
+    "email": "admins@library.com",
+    "password": "$2a$10$NZewwMDfFqSqkYeNvYbfR.cP1N4VOj8BCe7C4Su1H/PC3iJRBYXiy",
+    "role": "admin",
+    "createdAt": "2025-10-30T16:26:24.402Z",
+    "__v": 0
+  },
+  {
+    "_id": "69039e1bc30b5171faeaccfc",
+    "name": "Admin",
+    "email": "admin@library.com",
+    "password": "$2a$10$81mBa2or4sp9p1CvR3dkxOFPKhHnstAq9V/xewrsDrwhJ0rUzgJ0e",
+    "role": "admin",
+    "createdAt": "2025-10-30T17:19:23.644Z",
+    "__v": 0
+  },
+  {
+    "_id": "6903b18ab3f74275b7e0f589",
+    "name": "El",
+    "email": "el@example.com",
+    "password": "$2a$10$JjK4LkzSaYhhTpWoD3CCk.dFHMIrvj7OALlEVjPLWecsjQguQ4N0W",
+    "role": "user",
+    "createdAt": "2025-10-30T18:42:18.675Z",
+    "__v": 0
+  }
+]

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import api from '../services/api';
+import AdminLayout from './AdminLayout';
 
 export default function AdminContactMessages() {
   const [items, setItems] = useState([]);
@@ -37,7 +38,7 @@ export default function AdminContactMessages() {
   });
 
   return (
-    <div>
+    <AdminLayout>
       <h3 className="mb-3">Contact Messages</h3>
       <div className="d-flex mb-3">
         <input className="form-control me-2" placeholder="Search by name, email, or message" value={q} onChange={e => setQ(e.target.value)} />
@@ -74,6 +75,6 @@ export default function AdminContactMessages() {
           </table>
         </div>
       )}
-    </div>
+    </AdminLayout>
   );
 }

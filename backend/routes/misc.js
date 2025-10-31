@@ -6,7 +6,16 @@ const auth = require('../middleware/auth');
 const requiredRole = require('../middleware/roles');
 
 // Health endpoint (optional)
-router.get('/health', (_req, res) => res.json({ ok: true }));
+router.get('/health', (_req, res) => {
+  const conn = require('mongoose').connection;
+  res.json({
+    ok: true,
+    db: {
+      state: conn.readyState, // 1 connected, 0 disconnected
+      name: conn.name,
+    },
+  });
+});
 
 // Contact form
 router.post(

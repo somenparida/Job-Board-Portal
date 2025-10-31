@@ -86,6 +86,15 @@ async function run() {
         salary: '$30/hr - $38/hr',
         createdAt: now,
       },
+      {
+        title: 'Machine Learning Engineer',
+        company: 'NeuralNet Labs',
+        location: 'Remote',
+        description: 'Develop and deploy production-grade ML models. Work closely with data scientists and platform engineers to scale inference.',
+        type: 'Full-time',
+        salary: '$140k - $180k',
+        createdAt: now,
+      },
     ];
 
     await Job.insertMany(jobs);

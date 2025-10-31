@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import api from '../services/api';
+import AdminLayout from './AdminLayout';
 
 export default function AdminApplications() {
   const [items, setItems] = useState([]);
@@ -37,7 +38,7 @@ export default function AdminApplications() {
   });
 
   return (
-    <div>
+    <AdminLayout>
       <h3 className="mb-3">Applications</h3>
       <div className="d-flex mb-3">
         <input className="form-control me-2" placeholder="Search by applicant, email, job or company" value={q} onChange={e => setQ(e.target.value)} />
@@ -78,6 +79,6 @@ export default function AdminApplications() {
           </table>
         </div>
       )}
-    </div>
+    </AdminLayout>
   );
 }

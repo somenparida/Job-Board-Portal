@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import api from '../services/api';
+import AdminLayout from './AdminLayout';
 
 export default function UsersList() {
   const [users, setUsers] = useState([]);
@@ -26,8 +27,8 @@ export default function UsersList() {
   };
 
   return (
-    <div>
-      <h3>Users</h3>
+    <AdminLayout>
+      <h3 className="mb-3">Users</h3>
       <form className="row g-2 mb-3" onSubmit={submit}>
         <div className="col-md-3"><input className="form-control" placeholder="Name" value={form.name} onChange={e=>setForm({...form, name:e.target.value})} required/></div>
         <div className="col-md-3"><input type="email" className="form-control" placeholder="Email" value={form.email} onChange={e=>setForm({...form, email:e.target.value})} required/></div>
@@ -53,6 +54,6 @@ export default function UsersList() {
           </div>
         ))}
       </div>
-    </div>
+    </AdminLayout>
   );
 }
