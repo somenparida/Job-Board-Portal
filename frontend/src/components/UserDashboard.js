@@ -10,13 +10,18 @@ export default function UserDashboard() {
   const user = auth.getUser() || { name: 'User' };
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [myApps, setMyApps] = useState([]);
 
   useEffect(() => {
     const load = async () => {
       setLoading(true);
       try {
-        const j = await api.get('/jobs');
+        const [j, a] = await Promise.all([
+          api.get('/jobs'),
+          api.get('/applications/my').catch(() => ({ data: [] })),
+        ]);
         setJobs(j.data || []);
+        setMyApps(a.data || []);
       } catch (_) {}
       setLoading(false);
     };
@@ -25,21 +30,20 @@ export default function UserDashboard() {
 
   const activeJobs = jobs.length;
   const savedJobs = 0; // hook up to saved feature when available
-  const applicationsTotal = 0; // requires user applications endpoint
+  const applicationsTotal = myApps.length; // real count from /applications/my
   const profileViews = 0; // placeholder metric
 
   const recentApps = useMemo(() => {
-    // fabricate recent applications visually from first jobs to mirror screenshot (until real endpoint exists)
-    const sample = jobs.slice(0, 3).map((j, i) => ({
-      title: j.title,
-      company: j.company,
-      location: j.location,
-      salary: j.salary,
+    if (!myApps.length) return [];
+    return myApps.slice(0, 3).map((a, i) => ({
+      title: a.job?.title || 'Applied Job',
+      company: a.job?.company || '',
+      location: a.job?.location || '',
+      salary: a.job?.salary || '',
       status: i === 0 ? 'Under Review' : i === 1 ? 'Interview Scheduled' : 'Pending',
-      posted: i === 0 ? '2 days ago' : i === 1 ? '5 days ago' : '1 week ago',
+      posted: new Date(a.createdAt).toLocaleDateString(),
     }));
-    return sample;
-  }, [jobs]);
+  }, [myApps]);
 
   const recommended = useMemo(() => jobs.slice(0, 2), [jobs]);
 
