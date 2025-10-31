@@ -1,7 +1,11 @@
 import axios from 'axios';
 
+// Prefer an explicit REACT_APP_API_URL. During local development, default to localhost so
+// developers running the backend locally will hit their local API and see seeded jobs.
+const defaultRemote = 'https://job-board-portal-1-t2ql.onrender.com/api';
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000/api'
+  baseURL:
+    process.env.REACT_APP_API_URL || (process.env.NODE_ENV === 'development' ? 'http://localhost:5000/api' : defaultRemote),
 });
 
 // only set JSON content-type for methods that send a body
